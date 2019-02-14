@@ -124,10 +124,18 @@ function mapDays(days) {
     daysArray = [...days.split('')];
   }
 
-  let finalStringDays = daysArray.reduce(function (acc, cur) {
-    acc += DAYS[cur] ? DAYS[cur] : "" ; // DAYS vem do select.js
-    return acc;
-  }, " ")
+  let finalStringDays = parseDay(daysArray);
 
   return finalStringDays;
+}
+
+function parseDay(array) {
+  let daysArray = array;
+
+  let result = daysArray.reduce(function (acc, cur) {
+    acc += DAYS[cur] ? DAYS[cur] : "" ; // DAYS vem do select.js
+    return acc;
+  }, " ");
+
+  return result;
 }
