@@ -40,7 +40,7 @@ const discoverTimeToBoard = (code) => {
 
 function discoverTimeToSubjects(code) {
   /*
-    Para cobrir o caso onde por exemplo a disciplina começa às 17 e termina às 
+    Para cobrir o caso onde por exemplo a disciplina começa às 17 e termina às
     18, o código vindo do parâmetro será +/- assim (24T5 24N1), por isso o split
     dando match em qualquer valor que não seja por exemplo "white space"
   */
@@ -55,9 +55,9 @@ function discoverTimeToSubjects(code) {
 
   //Se tiver + de 1 código (vide o caso do split acima), formata ele bonitinho
   for(let i = 0; i<splitedCode.length; i++) {
-    if(splitedCode[i] == "") //No split anterior, vem um caractere vazio (why?)
+    if(!splitedCode[i]) //No split anterior, vem um caractere vazio (why?)
       continue; //Pula o caractere vazio
-    
+
     let splitedString = splitedCode[i].split(/(\D)/g);//Separo os dias dos horarios
     finalDays.push(mapDays(splitedString[0])); //Descubro o dia
     finalTimes.push(mapTimes(splitedString[1], splitedString[2])); //Descubro o horario
@@ -157,9 +157,9 @@ function mapDays(days) {
       case '1': finalStringDays += "Dom ";
         break;
       case '2': finalStringDays += "Seg ";
-        break;      
+        break;
       case '3': finalStringDays += "Ter ";
-        break;      
+        break;
       case '4': finalStringDays += "Qua ";
         break;
       case '5': finalStringDays += "Qui ";
