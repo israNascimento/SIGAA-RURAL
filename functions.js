@@ -1,5 +1,6 @@
 const discoverTimeToBoard = (code) => {
   //trim pois vem com espaços
+  // TIME_BOARD vem do select.js
   const time = TIME_BOARD[code.trim()] ? TIME_BOARD[code.trim()] : code.trim() ;
 
   return time;
