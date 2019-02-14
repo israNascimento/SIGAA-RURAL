@@ -1,41 +1,8 @@
 const discoverTimeToBoard = (code) => {
   //trim pois vem com espaços
-  switch(code.trim()) {
-    case "M1":
-      return "07:00 às 08:00";
-    case "M2":
-      return "08:00 às 09:00";
-    case "M3":
-      return "09:00 às 10:00";
-    case "M4":
-      return "10:00 às 11:00";
-    case "M5":
-      return "11:00 às 12:00";
+  let time = TIME_BOARD[code.trim()] ? TIME_BOARD[code.trim()] : code.trim() ;
 
-    case "T1":
-      return "12:00 às 13:00";
-    case "T2":
-      return "13:00 às 14:00";
-    case "T3":
-      return "14:00 às 15:00";
-    case "T4":
-      return "15:00 às 16:00";
-    case "T5":
-      return "16:00 às 17:00";
-
-    case "N1":
-      return "17:00 às 18:00"
-    case "N2":
-      return "18:00 às 19:00"
-    case "N3":
-      return "19:00 às 20:00"
-    case "N4":
-      return "20:00 às 21:00"
-    case "N5":
-      return "21:00 às 22:00"
-    default:
-      return code;
-  }
+  return time;
 }
 
 function discoverTimeToSubjects(code) {
