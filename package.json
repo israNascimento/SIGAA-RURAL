@@ -1,0 +1,24 @@
+{
+  "name": "sigaa",
+  "version": "1.0.0",
+  "description": "Extensão para o google chrome com o objetivo de melhorar a usabilidade do SIGAA da UFRRJ",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/israNascimento/SIGAA-RURAL.git"
+  },
+  "author": "Israel Nascimento",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/israNascimento/SIGAA-RURAL/issues"
+  },
+  "homepage": "https://github.com/israNascimento/SIGAA-RURAL#readme",
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
