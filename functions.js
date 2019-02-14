@@ -117,6 +117,7 @@ function mapTimes(turn, time) {
 
 function mapDays(days) {
   let daysArray = [];
+  // Tradando o caso de poder ser array
   if (Array.isArray(days)) {
     daysArray = [...days];
   } else {
