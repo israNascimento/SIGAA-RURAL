@@ -28,4 +28,14 @@ const TIME_BOARD = {
   "N5": "21:00 às 22:00"
 }
 
+const DAYS = {
+    "1": "Dom ",
+    "2": "Seg ",
+    "3": "Ter ",
+    "4": "Qua ",
+    "5": "Qui ",
+    "6": "Sex ",
+    "7": "Sab ",
+}
+
 console.log("Ola mundo!");

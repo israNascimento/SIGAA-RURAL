@@ -116,26 +116,17 @@ function mapTimes(turn, time) {
 }
 
 function mapDays(days) {
-  let finalStringDays = "";
-
-  //For para caso tenha mais de um dia.
-  for(let i = 0; i<days.length; i++) {
-    switch(days[i]) {
-      case '1': finalStringDays += "Dom ";
-        break;
-      case '2': finalStringDays += "Seg ";
-        break;
-      case '3': finalStringDays += "Ter ";
-        break;
-      case '4': finalStringDays += "Qua ";
-        break;
-      case '5': finalStringDays += "Qui ";
-        break;
-      case '6': finalStringDays += "Sex ";
-        break;
-      case '7': finalStringDays += "Sab ";
-        break;
-    }
+  let daysArray = [];
+  if (Array.isArray(days)) {
+    daysArray = [...days];
+  } else {
+    daysArray = [...days.split('')];
   }
+
+  let finalStringDays = daysArray.reduce(function (acc, cur) {
+    acc += DAYS[cur] ? DAYS[cur] : "" ; // DAYS vem do select.js
+    return acc;
+  }, " ")
+
   return finalStringDays;
 }
