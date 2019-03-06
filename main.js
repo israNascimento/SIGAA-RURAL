@@ -1,3 +1,19 @@
+//Estou na tela principal
+if(MAIN_SCHEDULEBOARD_BODY != null) {
+
+  for(let i = 0; i<MAIN_SCHEDULEBOARD_BODY.children.length; i++) {
+    const currentLine = MAIN_SCHEDULEBOARD_BODY.children[i];
+
+    let horaryColumn = currentLine.children[2];
+    if(horaryColumn != null){
+      horaryColumn.style.padding = "7px";
+      horaryColumn.style.fontWeight = "bold";
+      horaryColumn.setAttribute("width", "50%");
+      horaryColumn.children[0].innerHTML = discoverTimeToSubjects(horaryColumn.children[0].innerHTML);
+    }
+  }
+}
+
 //Estou na tela de mostrar horários
 if(SHCEDULEBOARD_HEADER != null) {
   const horary =  SHCEDULEBOARD_HEADER.children[0];

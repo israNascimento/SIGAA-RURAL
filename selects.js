@@ -6,6 +6,17 @@ const SCHEDULEBOARD_BODY = document.querySelector(
   '#conteudo > div.box-geral >' +'div:nth-child(4) > table > tbody'
 );
 
+
+const MAIN_SCHEDULEBOARD_HEADER = document.querySelector(
+  '#conteudo > #portal-docente > #main-docente > #turmas-portal > table.subFormulario > thead > tr'
+);
+
+const MAIN_SCHEDULEBOARD_BODY = document.querySelector(
+  '#conteudo > #portal-docente > #main-docente > #turmas-portal >' +'table:nth-child(3) > tbody'
+);
+
+
+
 //Seleciona elemento cujo id contenha NívelTR
 //As linhas (<tr>) de disciplinas tem um id nesse estilo -> cc_29001t_05s_0º NívelTR
 const SUBJECTS = document.querySelectorAll('[id*="NívelTR"]');
@@ -38,4 +49,4 @@ const DAYS = {
     "7": "Sab ",
 }
 
-console.log("Ola mundo!");
+console.log("Ola mundo3!");
