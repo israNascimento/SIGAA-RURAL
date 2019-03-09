@@ -1,6 +1,6 @@
 {
   "name": "sigaa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extensão para o google chrome com o objetivo de melhorar a usabilidade do SIGAA da UFRRJ",
   "main": "main.js",
   "scripts": {
