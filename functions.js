@@ -33,7 +33,7 @@ function discoverTimeToSubjects(code) {
   //String final que será trocada pelos códigos de disciplinas
   let finalString = "";
   for(let i = 0; i < finalDays.length; i++) {
-    finalString += finalDays[i] + " | " + finalTimes[i];
+    finalString += finalDays[i] +"<br>| " + finalTimes[i];
     finalString += "<br>";
   }
   return finalString;
@@ -112,9 +112,6 @@ function mapTimes(turn, time) {
       break;
     }
   }
-
-
-  console.log(finalStringTime);
   return finalStringTime;
 }
 
@@ -136,7 +133,7 @@ function parseDay(array) {
   let daysArray = array;
 
   let result = daysArray.reduce(function (acc, cur) {
-    acc += DAYS[cur] ? DAYS[cur] : "" ; // DAYS vem do select.js
+    acc += DAYS[cur] ? DAYS[cur]+" " : "" ; // DAYS vem do select.js
     return acc;
   }, " ");
 
