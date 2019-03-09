@@ -15,10 +15,5 @@
   "bugs": {
     "url": "https://github.com/israNascimento/SIGAA-RURAL/issues"
   },
-  "homepage": "https://github.com/israNascimento/SIGAA-RURAL#readme",
-  "devDependencies": {
-    "eslint": "^5.13.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.16.0"
-  }
+  "homepage": "https://github.com/israNascimento/SIGAA-RURAL#readme"
 }
