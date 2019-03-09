@@ -7,7 +7,6 @@ if(MAIN_SCHEDULEBOARD_BODY != null) {
     let horaryColumn = currentLine.children[2];
     if(horaryColumn != null){
       horaryColumn.style.padding = "7px";
-      horaryColumn.style.fontWeight = "bold";
       horaryColumn.setAttribute("width", "50%");
       horaryColumn.children[0].innerHTML = discoverTimeToSubjects(horaryColumn.children[0].innerHTML);
     }
