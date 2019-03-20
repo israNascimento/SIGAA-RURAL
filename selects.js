@@ -15,6 +15,9 @@ const MAIN_SCHEDULEBOARD_BODY = document.querySelector(
   '#conteudo > #portal-docente > #main-docente > #turmas-portal >' +'table:nth-child(3) > tbody'
 );
 
+const MATRICULA_EXTRAORDIONARIA_TABLE = document.querySelector(
+  '#lista-turmas-extra > tbody'
+);
 
 
 //Seleciona elemento cujo id contenha NívelTR

@@ -24,9 +24,12 @@ function discoverTimeToSubjects(code) {
   for(let i = 0; i<splitedCode.length; i++) {
     if(!splitedCode[i]) //No split anterior, vem um caractere vazio (why?)
       continue; //Pula o caractere vazio
-
     let splitedString = splitedCode[i].split(/(\D)/g);//Separo os dias dos horarios
-    finalDays.push(mapDays(splitedString[0])); //Descubro o dia
+    if(i == 0) {
+      finalDays.push(mapDays(splitedString[0])); //Descubro o dia
+    } else {
+      finalDays.push("<br>"+mapDays(splitedString[0])); //Descubro o dia
+    }
     finalTimes.push(mapTimes(splitedString[1], splitedString[2])); //Descubro o horario
   }
 
