@@ -69,3 +69,5 @@ if(SUBJECTS != null) {
       discoverTimeToSubjects(SUBJECTS[i].children[5].children[0].innerHTML);
   }
 }
+
+const 
