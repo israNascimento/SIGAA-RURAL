@@ -69,4 +69,17 @@ if(SUBJECTS != null) {
       discoverTimeToSubjects(SUBJECTS[i].children[5].children[0].innerHTML);
   }
 }
- 
+
+//Estou na parte de se inscrever em disciplinas equivalentes
+if(EQUIVALENT_SUBJECTS != null) {
+  for(let i = 0; i<EQUIVALENT_SUBJECTS.length; i++) {
+    /*Para cada linha de disciplina (EQUIVALENT_SUBJECTS[i]), 
+      seleciona a coluna que contém o código de horário (children[6]),
+      e dentro do <td> de horário, existe uma tag <label>,
+      logo é necessário descer mais um nível na árvore (children[0]) para
+      conseguir acessar o código com o horário da disciplina
+    */
+    EQUIVALENT_SUBJECTS[i].children[6].children[0].innerHTML = 
+      discoverTimeToSubjects(EQUIVALENT_SUBJECTS[i].children[6].children[0].innerHTML);
+  }
+}
