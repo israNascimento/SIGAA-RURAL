@@ -31,6 +31,14 @@ const SIGAA_BETA_SCHEDULE_TIME_HEADER = document.querySelector(
 //As linhas (<tr>) de disciplinas tem um id nesse estilo -> cc_29001t_05s_0º NívelTR
 const SUBJECTS = document.querySelectorAll('[id*="NívelTR"]');
 
+//Seleciona elemento cujo id contenha _TR
+//As linhas (<tr>) de disciplinas tem um id nesse estilo -> cc_30847c_24803t_01s_TR
+const EQUIVALENT_SUBJECTS = document.querySelectorAll('[id*="_TR"]');
+
+//Seleciona elemento cujo id contenha turma_ e seja da tag tr
+//As linhas (<tr>) de disciplinas tem um id nesse estilo -> turma_142381TR
+const OPEN_SUBJECTS = document.querySelectorAll('tr[id*="turma_"]');
+
 const TIME_BOARD = {
   M1: "07:00 às 08:00",
   M2: "08:00 às 09:00",
