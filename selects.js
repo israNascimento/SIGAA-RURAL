@@ -23,6 +23,10 @@ const SIGAA_BETA = document.querySelector(
   "#j_id_jsp_1306271468_3 > div:nth-child(5) > div > div > table > tbody"
 );
 
+const SIGAA_BETA_TABLE_HEADERS = document.querySelector(
+  "#j_id_jsp_1306271468_3 > div:nth-child(5) > div > div > table > thead > tr"
+);
+
 const SIGAA_BETA_SCHEDULE_TIME_HEADER = document.querySelector(
   "#j_id_jsp_1306271468_3 > div:nth-child(5) > div > div > table > thead > tr > th.text-center"
 );
