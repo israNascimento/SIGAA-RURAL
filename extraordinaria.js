@@ -15,7 +15,7 @@ if (MATRICULA_EXTRAORDIONARIA_TABLE != null) {
 
 if (SIGAA_BETA !== null) {
   SIGAA_BETA_SCHEDULE_TIME_HEADER.removeAttribute("style");
-  SIGAA_BETA_SCHEDULE_TIME_HEADER.style.width = "160px"
+  SIGAA_BETA_SCHEDULE_TIME_HEADER.style.width = "180px"
   //Centraliza texto dos headers, exceto os nomes das disciplinas.
   for (let i = 1; i < SIGAA_BETA_TABLE_HEADERS.children.length; i++) {
     const currentHeader = SIGAA_BETA_TABLE_HEADERS.children[i];
