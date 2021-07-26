@@ -9,9 +9,10 @@ function discoverTimeToSubjects(code) {
   /*
     Para cobrir o caso onde por exemplo a disciplina começa às 17 e termina às
     18, o código vindo do parâmetro será +/- assim (24T5 24N1), por isso o split
-    dando match em qualquer valor que não seja por exemplo "white space"
+    dando match em qualquer valor que não seja por exemplo "white space". O filter
+    é utilizado para remover as strings vazias que aparecem quando o split ocorre.
   */
-  let splitedCode = code.split(/\W/g);
+    let splitedCode = code.split(/\W/g).filter((value) => value);
 
   /*
     Para melhorar o visual do caso anterior inserindo um <br> é necessário
@@ -22,8 +23,6 @@ function discoverTimeToSubjects(code) {
 
   //Se tiver + de 1 código (vide o caso do split acima), formata ele bonitinho
   for(let i = 0; i<splitedCode.length; i++) {
-    if(!splitedCode[i]) //No split anterior, vem um caractere vazio (why?)
-      continue; //Pula o caractere vazio
     let splitedString = splitedCode[i].split(/(\D)/g);//Separo os dias dos horarios
     if(i == 0) {
       finalDays.push(mapDays(splitedString[0])); //Descubro o dia

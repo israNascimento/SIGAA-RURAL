@@ -15,11 +15,19 @@ if (MATRICULA_EXTRAORDIONARIA_TABLE != null) {
 
 if (SIGAA_BETA !== null) {
   SIGAA_BETA_SCHEDULE_TIME_HEADER.removeAttribute("style");
+  SIGAA_BETA_SCHEDULE_TIME_HEADER.style.width = "180px"
+  //Centraliza texto dos headers, exceto os nomes das disciplinas.
+  for (let i = 1; i < SIGAA_BETA_TABLE_HEADERS.children.length; i++) {
+    const currentHeader = SIGAA_BETA_TABLE_HEADERS.children[i];
+    currentHeader.style.textAlign = "center";
+  }
   for (let i = 0; i < SIGAA_BETA.children.length; i++) {
     const currentLine = SIGAA_BETA.children[i];
     if (currentLine.className.indexOf("destaque") > -1) {
       continue;
     }
+    currentLine.children[0].style.textAlign = "center";//Centraliza o texto do código da disciplina
+    currentLine.children[4].style.textAlign = "center";//Centraliza os eventos da disciplina
     let code = currentLine.children[3].innerHTML;
     if (code.length > 0) {
       console.log(discoverTimeToSubjects(code));
